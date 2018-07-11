@@ -1,8 +1,107 @@
+@import "./color.less";
+
+
+@margin-def: 8px; //default margin
+@padding-def: 8px; //default padding
+
+// font-sizes
+@font-base: 16px;
+@font-md: 1.5rem;
+@font-lg: 2.5rem;
+@font-sm: 1rem;
+@font-xl: 3rem;
+
+@masketta-bdr-radius: 5px;
+
+@masketta-border: 3px solid @bdr-color;
+
+html {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center; // horizontal
+	align-items: flex-start; // vertical
+	align-content: flex-start;
+	// flex-grow: 1;
+	// flex-basis: auto (20%), whatever 
+	// order: (determines order in display)
+	font-family: Tahoma, Geneva, sans-serif;
+	
+	width: 100%;
+	
+	background-color: @bg-black;
+	color: @masketta-text-color;
+	font-size: @font-base;
+}
+
+body {
+	.flcl;
+	width: 100%;
+	margin: 0;
+}
+
+.masketta-content {
+	.flcl;
+	width: 100%;
+	flex-grow: 1;
+
+	.masketta-content__body {
+		.flrwfw;
+//		flex-grow: 1;
+		justify-content: center;
+		margin: @margin-def;
+		
+	}
+}
 
 .masketta-clan {
-	color: black;
-	background: url('../images/bane.jpg');
+	color: @masketta-text-color;
+}
+
+.flexy-boy() {
+	display: flex;
+}
+
+.flcl() {
+	display: flex;
+	flex-direction: column;
+}
+
+.flrw() {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flrwnw() {
+	display: flex;
+	flex-direction: row;
+}
+
+.flrwfw() {
+//	display: flex;
+//	flex-direction: row;
+//	flex-wrap: wrap;
+	.flrw;
+	width: 100%;
+}
+
+.flrwcentery() {
+	margin: auto 0;
+}
+.flclcenterx() {
+	margin: 0 auto;
 }
 
 
+//@xl-media: only screen and (min-width: 1200px);
+//@l-media: only screen and (min-width: 992px);
+//@m-media: only screen and (min-width: 768px);
+//@sm-media: only screen and (min-width: 600px);
+//@xs-media: only screen and (max-width: 600px);
+
+
+
+// if multiple extend'in is done in nested media columns, extend properties
+// at the top level ( mentioned on less features site )
 

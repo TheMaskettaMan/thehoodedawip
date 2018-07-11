@@ -1,0 +1,56 @@
+@import './color.less';
+@import './style.less';
+
+@header-border: @masketta-border;
+@footer-border: @masketta-border;
+
+.clan-header {
+	.flrw;
+	justify-content: space-between;
+	background-color: @bg-dark;
+
+	.header__item {
+		.flrw;
+		.border-transition;
+		flex-grow: 1;
+		flex-basis: auto;
+		justify-content: center;
+		
+
+		border: @header-border;
+		padding: @padding-def;
+		
+		font-size: @font-lg;
+		
+		&:hover {
+			border-color: @bdr--white--hover;
+		}
+	}
+
+}
+
+
+.clan-footer {
+	.flrw;
+	justify-content: space-between;
+	background-color: @bg-dark;
+
+	.footer__item {
+		.flrw;
+		flex-grow: 1;
+		flex-basis: auto;
+		justify-content: center;
+
+		border: @footer-border;
+		padding: @padding-def;
+
+		font-size: @font-md;
+
+		&:hover {
+			border-color: @bdr--white--hover;
+		}
+	}
+
+}
+
+

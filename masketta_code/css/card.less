@@ -1,0 +1,81 @@
+@import "./color.less";
+@import "./style.less";
+
+@card-border: @masketta-border;
+
+
+.deck {
+	.flrw;
+	flex-wrap: wrap;
+
+}
+
+.deck .card {
+	.flcl;
+	.border-transition;
+	.flclcenterx;
+	padding: @padding-def;
+	margin: @margin-def;
+	flex-grow: 1;
+
+	background-color: @bg-dark;
+	
+	border: @card-border;
+	border-radius: @masketta-bdr-radius;
+	
+	.card__title {
+		.flrw;
+		.flrwcentery;
+
+	}
+
+	.card__text {
+		.flrw;
+		.flrwcentery;
+
+	}
+
+	&:hover {
+		border-color: @bdr--white--hover;
+	}
+
+	&--yes {
+		border-color: @bdr--yes;
+		&:hover { border-color: @bdr--yes--hover; }
+	}
+
+	&--no {
+
+	}
+
+	&--wew {
+		
+	}
+
+	&--mad {
+
+	}
+
+	& --no-border {
+		border: none;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		flex-basis: 20%;
+	}
+
+	@media only screen and (min-width: 500px) {
+		flex-basis: 30%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

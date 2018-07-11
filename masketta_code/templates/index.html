@@ -1,9 +1,23 @@
 <html>
-	<h1>In Progress</h1>
+	<header>
+		<script src="/masketta_js"></script>
+	</header>
+	<body>
 
+		{# variable syntax below #}
+		{{ header|safe }}
 
+		<div class="masketta-content">
+			<div class="masketta-content__body">
+				
+				{{ content|safe }}
 
+			</div>
+		</div>
 
+		{{ footer|safe }}
+
+		</div>
+	</body>
 </html>
-
 

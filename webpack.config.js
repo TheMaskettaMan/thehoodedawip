@@ -5,11 +5,12 @@ const path = require('path')
 
 module.exports = {
 	mode: 'development',
-	entry: './masketta_code/js/index.js',
+	entry: './main.js',
 	devtool: 'inline-source-map',
+	context: path.resolve(__dirname, './masketta_code/js'),
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'masketta_dist')
+		path: path.resolve(__dirname, './masketta_code/masketta_dist')
 	},
 	
 	module: {
@@ -42,7 +43,15 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: [
-					'file-loader',
+					{
+						loader: 'file-loader',
+						options : {
+							name: '[name].[ext]',
+							// TODO investigate [path] variable working with
+							// name as written above
+							outputPath: 'images/'
+						}
+					}
 				]
 			},
 			{
